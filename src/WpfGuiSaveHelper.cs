@@ -12,9 +12,9 @@ namespace WpfGuiDataSaver
 
     public static class GuiSaveHelper
     {
-        public static bool SkipPasswordFields {  get; set; }
+        public static bool SkipPasswordFields { get; set; } = false;
 
-        private static List<T> FindVisualChildren<T>( DependencyObject depObj ) where T : DependencyObject
+        private static List<T> FindChildren<T>( DependencyObject depObj ) where T : DependencyObject
         {
             if ( depObj == null )
                 return new List<T>();
@@ -32,7 +32,7 @@ namespace WpfGuiDataSaver
 
                 if ( child is DependencyObject )
                 {
-                    output.AddRange( FindVisualChildren<T>( (DependencyObject)child ) );
+                    output.AddRange( FindChildren<T>( (DependencyObject)child ) );
                 }
             }
 
@@ -44,7 +44,7 @@ namespace WpfGuiDataSaver
             var saveData = new GuiSavedDataContainer();
             bool skipCheck = string.IsNullOrEmpty( prefix );
 
-            var guiObjects = FindVisualChildren<FrameworkElement>( rootObj );
+            var guiObjects = FindChildren<FrameworkElement>( rootObj );
 
             saveData.UseIds = scanType == GuiCheckIdType.Uid;
 
@@ -132,9 +132,9 @@ namespace WpfGuiDataSaver
             return saveData;
         }
 
-        public static void RestoreData( DependencyObject depObj, GuiSavedDataContainer saveData )
+        public static void RestoreData( DependencyObject rootObj, GuiSavedDataContainer saveData )
         {
-            var Objects = FindVisualChildren<FrameworkElement>( depObj );
+            var Objects = FindChildren<FrameworkElement>( rootObj );
 
             foreach ( var obj in Objects )
             {
@@ -194,7 +194,7 @@ namespace WpfGuiDataSaver
         {
             bool skipCheck = string.IsNullOrEmpty( prefix );
 
-            var guiObjects = FindVisualChildren<FrameworkElement>( rootObj );
+            var guiObjects = FindChildren<FrameworkElement>( rootObj );
 
             foreach ( var obj in guiObjects )
             {

@@ -58,16 +58,16 @@
 
         <GroupBox Grid.Row="0" Grid.Column="1" Margin="10">
             <GroupBox.Header>
-                <CheckBox Content="Ciccio" x:Name="checkInGroup" Margin="4"/>
+                <CheckBox Content="Nested check" x:Name="checkInGroup" Margin="4"/>
             </GroupBox.Header>
             <TextBox x:Name="nameInGroup" Margin="10"/>
         </GroupBox>
 
         <PasswordBox Grid.Row="2" Grid.Column="1" Margin="10" x:Name="password"/>
 
-        <ToggleButton Grid.Row="3" Grid.Column="1" Margin="10" Content="Ciccio" Name="savetglButton"/>
+        <ToggleButton Grid.Row="3" Grid.Column="1" Margin="10" Content="Toggle me" Name="savetglButton"/>
 
-        <CheckBox Grid.Row="4" Grid.Column="1" IsThreeState="True" Content="Banana" Margin="10" x:Name="saveTristate"/>
+        <CheckBox Grid.Row="4" Grid.Column="1" IsThreeState="True" Content="Tristate" Margin="10" x:Name="saveTristate"/>
 
         <!-- Riga con tre bottoni -->
         <StackPanel Grid.Row="10" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">

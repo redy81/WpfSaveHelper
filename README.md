@@ -95,3 +95,13 @@ Considering the following XAML:
 | "" | `GuiCheckIdType.Uid` | mybox (ubox), saveSlider (mySlider) |
 | "u" | `GuiCheckIdType.Uid` | mybox (ubox) |
 
+
+
+### Coffee found
+
+If you find this useful, or it helped you to save time, you can buy me a coffee.
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=VNMV7XY9J5HBG)
+
+**Bitcoin**: bc1q4379vq6jfg8swgqajyaetm02fyk2mwj0mwy8wj<br>
+**Bitcoin**: 1DbK9AoXxMRYYENwsoDEzqyxppo1cMUQUN

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="example\**" />
+    <EmbeddedResource Remove="example\**" />
+    <None Remove="example\**" />
+    <Page Remove="example\**" />
+  </ItemGroup>
+	
+</Project>
